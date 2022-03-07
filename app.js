@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(postRoute.router);
 app.use(errorHandler);
 
-// Define a custom error handler TODO
+// Define a custom error handler
 function errorHandler(err, req, res, next) {
   console.log(err.stack);
   if (err.statusCode) {
@@ -18,8 +18,6 @@ function errorHandler(err, req, res, next) {
   }
   res.send({ error: err.message });
 }
-
-
 
 // Start Express server
 const port = process.env.PORT || 3000;
