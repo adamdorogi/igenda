@@ -2,6 +2,33 @@
 
 An Node.js server for scheduling Instagram posts using [Express.js](https://github.com/expressjs/express), [Bull](https://github.com/OptimalBits/bull), and [Instagram Private API](https://github.com/dilame/instagram-private-api).
 
+## Installation
+
+```sh
+git clone git@github.com:adamdorogi/igenda.git
+```
+
+## Usage
+
+1. Create a `.env` file and add the following environment variables:
+
+   ```
+   NODE_ENV=development
+   EXPRESS_PORT=
+   REDIS_PORT=6379
+   REDIS_HOST=127.0.0.1
+   REDIS_USERNAME=
+   REDIS_PASSWORD=
+   ```
+
+   Update as needed.
+
+2. Run `app.js` from the root directory
+
+   ```sh
+   node app.js
+   ```
+
 ## Endpoints
 
 ### `POST /posts`
