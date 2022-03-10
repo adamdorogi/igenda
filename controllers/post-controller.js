@@ -101,7 +101,7 @@ async function postPost(req, res, next) {
     }
 
     const job = await postService.schedulePost(post, session, timestamp, delay);
-    const result = formatJob(job);
+    const result = await formatJob(job);
     res.status(201).send(result);
     next();
   } catch (err) {
